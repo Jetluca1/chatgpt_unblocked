@@ -9,8 +9,10 @@ export const config = {
 };
 
 const handler = async (req: Request): Promise<Response> => {
-  const { prompt } = (await req.json()) as {
+  // console.log(await req.json())
+  const { prompt, key } = (await req.json()) as {
     prompt?: string;
+    key?: string;
   };
 
   if (!prompt) {
@@ -24,12 +26,12 @@ const handler = async (req: Request): Promise<Response> => {
     top_p: 1,
     frequency_penalty: 0,
     presence_penalty: 0,
-    max_tokens: 200,
+    max_tokens: 500,
     stream: true,
     n: 1,
   };
+  const stream = key?await OpenAIStream(payload, key):await OpenAIStream(payload, process.env.OPENAI_API_KEY)
 
-  const stream = await OpenAIStream(payload);
   return new Response(stream);
 };
 
