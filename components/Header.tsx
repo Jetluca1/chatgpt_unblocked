@@ -24,7 +24,6 @@ export default function Header() {
           width={32}
           height={28}
         />
-      </a>
     </header>
   );
 }

@@ -104,7 +104,7 @@ const Home: NextPage = (props: any) => {
   return (
     <div className="flex max-w-10xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Head>
-        <title>Twitter Generator</title>
+        <title>ChatGPT Unblocked </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
