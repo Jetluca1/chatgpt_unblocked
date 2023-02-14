@@ -16,11 +16,7 @@ export default function Header() {
           ChatGPT Unblocked
         </h1>
       </Link>
-      <a
-        href="https://vercel.com/templates/next.js/twitter-bio"
-        target="_blank"
-        rel="noreferrer"
-      >
+
         <Image
           alt="Vercel Icon"
           src="/vercelLogo.png"
