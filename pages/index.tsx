@@ -63,7 +63,7 @@ const Home: NextPage = (props: any) => {
       setGeneratedBios((prev) => prev + chunkValue);
       temp += chunkValue;
     }
-    console.log("Streamed response: ", temp);
+    // console.log("Streamed response: ", temp);
     // props.addReq({ Req: prompt, Time: getTimestamp(), Res: temp })
 
     props.addReq({ Req: prompt, Time: getTimestamp(), Res: temp });
@@ -80,21 +80,21 @@ const Home: NextPage = (props: any) => {
 
   // function checkUsedTokens that iterates through props.user.requests how many characters were used in the req and res, but only for requests in the last 24 hours
   function checkUsedTokens() {
-    console.log("props.FBuser.requests: ", props.FBuser.requests);
+    // console.log("props.FBuser.requests: ", props.FBuser.requests);
     var usedTokens = 0;
     var now = new Date();
 
     var fiveMinutesAgo = new Date(now.getTime() - 24 * 60 * 60 * 1000);
     // var timezoneOffset = fiveMinutesAgo.getTimezoneOffset();
     // fiveMinutesAgo.setMinutes(fiveMinutesAgo.getMinutes() + timezoneOffset);
-    console.log("fiveMinutesAgo: ", fiveMinutesAgo);
+    // console.log("fiveMinutesAgo: ", fiveMinutesAgo);
     props.FBuser.requests?.map((r: any) => {
-      console.log(new Date(r.Time) > fiveMinutesAgo);
+      // console.log(new Date(r.Time) > fiveMinutesAgo);
       if (new Date(r.Time) > fiveMinutesAgo) {
         usedTokens += r.Req.length + r.Res.length;
       }
     });
-    console.log("used tokens: ", usedTokens / 4);
+    console.log("used tokens n past 24h: ", usedTokens / 4);
     return usedTokens / 4;
   }
 

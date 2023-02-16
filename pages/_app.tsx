@@ -36,7 +36,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       if (FBuser.uid === user.uid) {
         return FBuser;
       }
-      console.log("no_match");
+      // console.log("no_match");
     }
     return null;
   }
@@ -76,7 +76,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     // var u = await getUserFirebase(FBuser.id)
     // setFBuser(u)
     return getUserFirebase(FBuser.id).then((u) => {
-      console.log("Test", u);
+      // console.log("Test", u);
       setFBuser(u);
       return u;
     });
@@ -87,7 +87,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       api_key: key,
     });
     return getUserFirebase(FBuser.id).then((u) => {
-      console.log("Test", u);
+      // console.log("Test", u);
       setFBuser(u);
       return u;
     });
