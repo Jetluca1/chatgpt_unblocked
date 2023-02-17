@@ -4,13 +4,13 @@ import "firebase/compat/firestore";
 import "firebase/compat/storage";
 
 const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_apiKey,
-  authDomain: process.env.NEXT_PUBLIC_authDomain,
-  projectId: process.env.NEXT_PUBLIC_projectId,
-  storageBucket: process.env.NEXT_PUBLIC_storageBucket,
-  messagingSenderId: process.env.NEXT_PUBLIC_messagingSenderId,
-  appId: process.env.NEXT_PUBLIC_appId,
-  measurementId: process.env.NEXT_PUBLIC_measurementId,
+  apiKey: "AIzaSyDZ8JGO6UT4duP6hu3l0JCz0s6xok5CeaQ",
+  authDomain: "gpt-unblocked.firebaseapp.com",
+  projectId: "gpt-unblocked",
+  storageBucket: "gpt-unblocked.appspot.com",
+  messagingSenderId: "404216855215",
+  appId: "1:404216855215:web:25ed86ec185a9a86c4325a",
+  measurementId: "G-08KX4M794R"
 };
 // console.log(firebaseConfig.apiKey);
 try {
